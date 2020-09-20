@@ -6,6 +6,7 @@ WPA := wpa_cli
 PRODUCT_PACKAGES += $(WLAN_CHIPSET)_wlan.ko
 PRODUCT_PACKAGES += wifilearner
 PRODUCT_PACKAGES += $(WPA)
+PRODUCT_PACKAGES += lowirpcd
 
 #Enable WIFI AWARE FEATURE
 WIFI_HIDL_FEATURE_AWARE := true
@@ -28,3 +29,6 @@ QC_WIFI_HIDL_FEATURE_DUAL_AP := true
 # Enable vendor properties.
 PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.aware.interface=wifi-aware0
+
+# Enable STA + STA Feature.
+QC_WIFI_HIDL_FEATURE_DUAL_STA := true
