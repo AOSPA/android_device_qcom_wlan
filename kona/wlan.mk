@@ -43,8 +43,9 @@ PRODUCT_COPY_FILES += \
 		      device/qcom/wlan/kona/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 endif
 
-
+ifneq ($(KERNEL_MODULES_INSTALL),)
 PRODUCT_PACKAGES += $(foreach chip, $(TARGET_WLAN_CHIP), $(WLAN_CHIPSET)_$(chip).ko)
+endif
 
 # Override WLAN configurations
 # Usage:
