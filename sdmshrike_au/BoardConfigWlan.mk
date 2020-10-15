@@ -1,1 +1,3 @@
+ifneq ($(KERNEL_MODULES_INSTALL),)
 BOARD_VENDOR_KERNEL_MODULES += $(foreach chip, $(TARGET_WLAN_CHIP), $(KERNEL_MODULES_OUT)/$(WLAN_CHIPSET)_$(chip).ko)
+endif

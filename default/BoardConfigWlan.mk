@@ -1,6 +1,8 @@
+ifneq ($(KERNEL_MODULES_INSTALL),)
 ifeq ($(TARGET_USES_QMAA), true)
 ifneq ($(TARGET_USES_QMAA_OVERRIDE_WLAN), false)
 BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/qca_cld3_wlan.ko
+endif
 endif
 endif
 
